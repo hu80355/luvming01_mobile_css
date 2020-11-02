@@ -41,7 +41,7 @@ html {
     letter-spacing: 0!important
 }
 .frame {
-    padding: 1em;
+    padding: 0.3em;
     background: #202040;
     border-top: none;
 }
@@ -98,9 +98,10 @@ button, select {
     transform-origin: top right;
 }
 
-#nav {
+nav#nav {
     transition: 0.3s ease-in-out;
 }
+
 #nav-overlay {
     opacity: 1;
     transition: opacity 150ms ease-in-out;
@@ -112,6 +113,10 @@ nav#nav > #nav-upper #noteDropdownContainer {
 nav#nav > #nav-upper #userDropdown #notification-badge {
  
     transition: top 0.8s ease-in-out;
+}
+
+#article-list > .notice > .item > a:before {
+    transition: transform 0.1s ease-in-out;
 }
 
 #movetotop img {
