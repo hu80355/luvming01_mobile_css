@@ -1,30 +1,156 @@
+/**
+    열밍님은 몸이 많이 허약한 서터리머입니다. 몸이 아프다 보니 마음도 지쳐있고, 그러다 보니 준수한 외모랑 말빨을 가지고 있음에도 늘 자존감이 낮다고 울먹거리는 양반입니다. 가끔씩 채팅으로라도 열밍님한테, 그 동안 참 잘 해왔고, 지금도 잘 하고 있다고 칭찬 한 마디씩 좀 부탁드립니다. 그리고 남는 트게더 포인트로 줄 광고 좀 방송때 마다 해주시면 감사드립니다. 이 코드를 보러 들어왔다면, 당신은 아마도 두 가지 중 하나겠군요. 코드를 긁어가러 왔거나, 아니면 열게더 모바일 페이지를 수정하러 왔겠군요. 만일 후자라면 전 이미 떠나블고 이 곳에 읍다는 거구만요. 제 뒤를 이어서 이것 저것 잘 좀 부탁드립니다. 물론 코드 긁으러 오신 분이라면, 다치지 마시고 야무지게 잘 긁어가시기 바랍니다. 다들 건강하십쇼.
+**/
+
+
 @font-face {
-    font-family: CookieRun-Regular;
-    src: url(https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/CookieRun-Regular.woff) format('woff');
-    font-weight: 400;
-    font-style: normal
+    font-family: 'NEXON Lv2 Gothic';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    unicode-range: U+0-33DD, U+AC00-D7A3, U+FF01-FFE6;
 }
 
 @font-face {
-    font-family: S-CoreDream-3Light;
-    src: url(https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff) format('woff');
-    font-weight: 400;
-    font-style: normal
+    font-family: 'NEXON Lv2 Gothic Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    unicode-range: U+0-33DD, U+AC00-D7A3, U+FF01-FFE6;
 }
 
 @font-face {
-    font-family: SDKukdetopokki-Lt;
-    src: url(https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/SDKukdetopokki-aLt00.woff) format('woff');
-    font-weight: 400;
-    font-style: normal
+    font-family: '777Balsamtint';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_nine_@1.1/777Balsamtint.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    unicode-range: U+0-33DD, U+AC00-D7A3, U+FF01-FFE6;
+}
+
+@font-face {
+    font-family: 'ghanachoco';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ghanachoco.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 
 body,
 html {
-    font-family: S-CoreDream-3Light, sans-serif;
+    font-family: 'NEXON Lv2 Gothic';
     font-weight: 400!important;
     letter-spacing: 0!important
 }
+.frame {
+    padding: 1em;
+    background: #202040;
+    border-top: none;
+}
+a.custom-achv-link {
+    display: inline-block;
+    border: none;
+    text-decoration: none;
+    overflow: hidden;
+    line-height: 26px;
+    vertical-align: top;
+    padding: 0px 4px;
+}
+.alertify .alert .msg, .alertify .dialog .msg {
+  
+    color: #202040 !important;
+}
+
+button, select {
+    text-transform: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+
+@keyframes HeartPumpping {
+	0%{transform:scale(1,1);}
+	10%{transform:scale(0.65,1.45);}
+	20%{transform:scale(1.4,0.7);}
+	30%{transform:scale(0.65,1.45);}
+	44%{transform:scale(1.05,0.8);}
+	58%{transform:scale(0.8,1.2);}
+	72%{transform:scale(1.05,0.8);}
+	86%{transform:scale(0.95,1.05);}
+	100%{transform:scale(1,1);}
+}
+
+
+.btn-outline-success:hover .fa.fa-thumbs-up {
+	animation: HeartPumpping 0.8s;
+}
+#nav .dropdown .dropdown-menu {
+    display: block !important;
+   transition: 0.2s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+    transform-origin: top left;
+    transform: scale(0);
+    opacity: 0;
+}
+#nav .dropdown.open .dropdown-menu {
+    transform: scale(1);
+    opacity: 1;
+}
+#nav .dropdown .dropdown-menu-right {
+    transform-origin: top right;
+}
+
+#nav {
+    transition: 0.3s ease-in-out;
+}
+#nav-overlay {
+    opacity: 1;
+    transition: opacity 150ms ease-in-out;
+}
+nav#nav > #nav-upper #noteDropdownContainer {
+    
+    margin-top: 15px;
+}
+nav#nav > #nav-upper #userDropdown #notification-badge {
+ 
+    transition: top 0.8s ease-in-out;
+}
+
+#movetotop img {
+        opacity: 0;
+    }
+    #movetotop {display: inline-block;
+    opacity: 1;
+    background: url(https://svgshare.com/i/R9R.svg);
+    width: 73px;
+    height: 108px;
+    background-size: contain;}
+
+#movetotop {
+    position: fixed;
+    bottom: 0px;
+    right: 0;
+    margin-right: 1em;
+    opacity: 0.9;
+    display: none;
+    z-index: 99;
+}
+
+
+
+header > #header-search-bar #header-search-input {
+    overflow: hidden;
+    -webkit-transition: 0.8s ease-in-out;
+    transition: 0.8s ease-in-out;
+}
+header > #header-search-bar.hide #header-search-input {
+    
+    opacity: 0;
+    -webkit-transition: 0.8s ease-in-out;
+    transition: 0.8s ease-in-out;
+}
+
+
+
+
 
 #article-list>.article-list-row>.item>.list-title {
     text-align: left;
@@ -55,8 +181,7 @@ h6 {
     background: #f6f0ff;
     text-decoration: none;
     font-size: 13px;
-    font-family: CookieRun-Regular, sans-serif;
-    font-weight: 400
+     font-family: 'NEXON Lv2 Gothic Bold'; font-weight:normal
 }
 
 body {
@@ -80,13 +205,18 @@ body {
     background: rgba(256, 256, 256, .9)
 }
 
+
+header>#header-area>#header-bar-link {
+      padding: 1px 16px 10px;
+}
+
 .btn.square {
     border-radius: 40px;
     border: none
 }
 
 header.nav-up>#header-area {
-    background: rgba(31, 141, 219, .7);
+    background: rgba(249,100,100, .7);
     transition: .3s ease-in-out
 }
 
@@ -98,7 +228,7 @@ header>#header-area {
     width: 92%;
     height: 45px;
     margin: 10px 4%;
-    background: rgba(255, 99, 99, .7);
+    background: rgba(102,199,247, .7);
     border-radius: 25px;
     -webkit-backdrop-filter: saturate(180%) blur(5px);
     padding: 5px 0;
@@ -113,7 +243,7 @@ header>#header-area>a>h1 {
     height: 69px;
     text-indent: -9999px;
     margin: 0 auto;
-    background: url(https://svgur.com/i/KAL.svg) no-repeat;
+    background: url(https://svgshare.com/i/R8w.svg) no-repeat;
     background-size: contain;
     margin-top: -16px
 }
@@ -193,10 +323,13 @@ header>#header-area>#header-search-link {
     vertical-align: top;
     font-size: 19px;
     line-height: 24px;
-    font-weight: 700;
+    font-weight: normal;
+    font-style:normal;
     padding-left: .4em;
     padding-right: .4em;
-    padding-bottom: .7em
+    padding-bottom: .7em;
+     font-family: 'ghanachoco';
+    
 }
 
 #article-list #article-list-category {
@@ -273,7 +406,7 @@ header>#header-area>#header-search-link {
 
 .pagination-area {
     padding: 16px 0 8px;
-    background: #543864;
+    background: #202040;
     text-align: center;
     width: 100%
 }
@@ -284,7 +417,7 @@ header>#header-area>#header-search-link {
     padding-top: 8px;
     text-align: center;
     position: relative;
-    background: #543864
+    background: #202040;
 }
 
 .pagination>.active>a,
@@ -339,7 +472,7 @@ header>#header-area>#header-search-link {
     font-size: 14px;
     line-height: 1.42857143;
     color: #eee!important;
-    background-color: transparent;
+    background-color: #543864;
     background-image: none;
     border: 1px solid #ccc;
     border-radius: 50px;
@@ -638,7 +771,7 @@ nav#nav>#nav-upper #userDropdownContainer {
     display: inline-block;
     color: #eee;
     float: right;
-    margin-top: 18px
+    top: 18px
 }
 
 nav#nav>#nav-upper-shortcut>.dropdown>a {
